@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Routes, Route }
+    from 'react-router-dom';
+import About from './pages/About';
+import Blogs from './pages/Blogs';
+
 
 export default class App extends Component {
     static displayName = App.name;
@@ -14,6 +19,12 @@ export default class App extends Component {
 
     static renderForecastsTable(forecasts) {
         return (
+            <>
+            <Routes>
+        <Route path='/about' element={<About/>} />
+        <Route path='/blogs' element={<Blogs/>} />
+            </Routes>
+
             <table className='table table-striped' aria-labelledby="tabelLabel">
                 <thead>
                     <tr>
@@ -33,7 +44,7 @@ export default class App extends Component {
                         </tr>
                     )}
                 </tbody>
-            </table>
+            </table></>
         );
     }
 
