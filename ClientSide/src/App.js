@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Routes, Route }
     from 'react-router-dom';
-import About from './pages/About';
-import Blogs from './pages/Blogs';
 
+import Home from './pages/Home';
+import ComputersInTheWorkForce from './pages/ComputersInTheWorkForce';
+import AboutUs from './pages/AboutUs';
+
+import NavBar from './Components/NavBar';
 
 export default class App extends Component {
     static displayName = App.name;
@@ -19,12 +22,10 @@ export default class App extends Component {
 
     static renderForecastsTable(forecasts) {
         return (
-            <>
-            <Routes>
-        <Route path='/about' element={<About/>} />
-        <Route path='/blogs' element={<Blogs/>} />
-            </Routes>
 
+            
+
+        
             <table className='table table-striped' aria-labelledby="tabelLabel">
                 <thead>
                     <tr>
@@ -44,7 +45,7 @@ export default class App extends Component {
                         </tr>
                     )}
                 </tbody>
-            </table></>
+            </table>
         );
     }
 
@@ -54,11 +55,27 @@ export default class App extends Component {
             : App.renderForecastsTable(this.state.forecasts);
 
         return (
-            <div>
-                <h1 id="tabelLabel" >Weather forecast</h1>
-                <p>This component demonstrates fetching data from the server.</p>
-                {contents}
-            </div>
+
+            <>
+                <NavBar/>
+
+
+            <Router>
+                    <Routes>
+                        <Route path="/" Component={Home} />
+                        <Route path="/about-us" Component={AboutUs} />
+                        <Route path="/computers-in-the-work-force" Component={ComputersInTheWorkForce} />
+                        
+                    </Routes>
+                
+            </Router>
+                </>
+
+            //<div>
+            //    <h1 id="tabelLabel" >Weather forecast</h1>
+            //    <p>This component demonstrates fetching data from the server.</p>
+            //    {contents}
+            //</div></>
         );
     }
 
