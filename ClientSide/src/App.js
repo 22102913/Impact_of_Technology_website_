@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Routes, Route }
+import { BrowserRouter as Router, Routes, Route, useLocation }
     from 'react-router-dom';
 
 import Home from './pages/Home';
@@ -13,7 +13,8 @@ export default class App extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { forecasts: [], loading: true };
+
+        this.state = { forecasts: [], loading: true};
     }
 
     componentDidMount() {
