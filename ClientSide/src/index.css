@@ -51,7 +51,7 @@ li {
     background-color: #a9a9a98c;
     height: 4px;
     left:0;
-    width: 100px;
+    width: 100%;
     bottom:4px;
     transition: 0.5s;
     border-radius:3px;
