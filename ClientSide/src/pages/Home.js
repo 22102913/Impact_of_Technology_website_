@@ -1,11 +1,7 @@
 import React from "react";
 
 const Home = () => {
-    return <>
-        <h1>Impact of Technology</h1>
-
-
-    </>
+    return (<h1 id="title"><span>Impact of Technology</span></h1>);  
 }
 
 export default Home;
