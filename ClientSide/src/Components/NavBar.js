@@ -1,20 +1,8 @@
-
-var item = document.querySelectorAll('a');
-var nav = document.querySelectorAll('#navbar-container');
-
 export default function NavBar() {
 
     const UrlPagePairs = { '': 'Home', 'about-us': 'About us', 'computers-in-the-work-force': 'Computers in the work force'}
 
-    const currentPage = UrlPagePairs[ window.location.href.split('/')[3]];
-
-    item.forEach(link => {
-        link.addEventListener('mouseover', (e) => { SetUnderlinePos(e.target) })
-        link.addEventListener('mouseout', (e) => {
-            
-        })
-        
-    })     
+    const currentPage = UrlPagePairs[ window.location.href.split('/')[3]];  
         
 
     return <nav id="nav">
@@ -25,7 +13,8 @@ export default function NavBar() {
             <li><a href="/computers-in-the-work-force" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Computers in the work force</a></li>
             <li><a href="/about-us" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>About us</a></li>
         </ul>
-        <div id="nav-underline"/>
+        <div id="nav-underline" />
+        <div id="nav-highlight" />
     </nav>
 }
 

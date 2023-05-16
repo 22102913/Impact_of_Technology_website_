@@ -81,6 +81,17 @@ li {
     border-radius:3px;
 }
 
+#nav-highlight {
+    position: absolute;
+    background-color: #ffd800;
+    height: 4px;
+    left: 0;
+    width: 75px;
+    bottom: 10px;
+    transition: 0.5s;
+    border-radius: 3px;
+}
+
 #title {
     margin:0;
     width: 100%;
