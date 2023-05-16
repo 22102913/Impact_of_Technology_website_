@@ -20,7 +20,7 @@ export default function NavBar() {
         highlight.style.setProperty('--l', currentLink.offsetLeft + "px");
         highlight.style.setProperty('--w', currentLink.offsetWidth + "px");
 
-        highlight.style.animation = "show 1s linear forward";
+        highlight.style.animation = "show 1s cubic-bezier(0.495, 0.010, 0.595, 1.000) forwards";
 
         //highlight.style.left = currentLink.offsetLeft + "px";
         //highlight.style.width = currentLink.offsetWidth + "px";
@@ -39,6 +39,7 @@ export default function NavBar() {
             <li><a href="/artificial-intelligence" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Artificial Intelligence</a></li>
             <li><a href="/environmental-effects" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Environmental Effects</a></li>
             <li><a href="/ethical-issues" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Ethical issues</a></li>
+            <li><a href="/sign-in" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Sign in</a></li>
         </ul>
         <div id="nav-underline" />
         <div id="nav-highlight" />
