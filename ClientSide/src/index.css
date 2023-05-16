@@ -114,8 +114,19 @@ a{
     left: 0;
     width: 75px;
     bottom: 10px;
-    transition: 0.5s;
     border-radius: 3px;
+}
+
+@keyframes show {
+    from {
+        left:0px;
+        width:0px;
+    }
+
+    to {        
+        left: var(--l, 0);
+        width: var(--w, 0);
+    }
 }
 
 #title {
