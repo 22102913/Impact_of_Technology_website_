@@ -11,7 +11,10 @@ export default function NavBar() {
             <li><a href="/" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Home</a></li>
             <li><a href="/about-us" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>About us</a></li>
             <li><a href="/computers-in-the-work-force" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Computers in the work force</a></li>
-            <li><a href="/about-us" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>About us</a></li>
+            <li><a href="/about-us" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Automated Decision Making</a></li>
+            <li><a href="/artificial-intelligence" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Artificial Intelligence</a></li>
+            <li><a href="/environmental-effects" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Environmental Effects</a></li>
+            <li><a href="/ethical-issues" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Ethical issues</a></li>
         </ul>
         <div id="nav-underline" />
         <div id="nav-highlight" />

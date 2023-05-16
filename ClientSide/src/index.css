@@ -34,6 +34,29 @@ code {
     monospace;
 }
 
+h1 {
+    text-align: center;
+    font-size: 5rem;
+    color: #e8e0d8;
+    line-height: 100%;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center; /* Align horizontal */
+    align-items: center; /* Align vertical */
+}
+
+h2 {
+    margin: 0;
+    text-align: center;
+    font-size: 2rem;
+    color: #e8e0d8;
+    line-height: 100%;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center; /* Align horizontal */
+    align-items: center; /* Align vertical */
+}
+
 
 nav{
     background-color:#222222ee
@@ -69,6 +92,9 @@ li {
             background-color:#ffffff11;
         }
 
+a{
+    color:#e8e0d8;
+}
 
 #nav-underline {
     position:absolute;
@@ -93,9 +119,11 @@ li {
 }
 
 #title {
-    margin:0;
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    right: 0;
+    margin: 0;
     text-align: center;
     font-size: 5rem;
     color: #e8e0d8;
@@ -104,6 +132,7 @@ li {
     display: flex;
     justify-content: center; /* Align horizontal */
     align-items: center; /* Align vertical */
+    display: block;
 }
 
 span {
