@@ -151,7 +151,7 @@ li {
 }
 
 #title-background {
-    /*
+    
     position: absolute;
     top: 25%;
     left: 30%;
@@ -167,7 +167,7 @@ li {
     background-blend-mode: normal,hard-light,normal,darken,normal,normal;
     filter: blur(100px);
     -webkit-filter: blur(100px);
-    opacity:0.6;*/
+    opacity:0.6;
 }
 
 span {
