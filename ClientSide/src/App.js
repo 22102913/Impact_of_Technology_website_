@@ -5,9 +5,10 @@ import { BrowserRouter as Router, Routes, Route, useLocation }
 import Home from './pages/Home';
 import ComputersInTheWorkForce from './pages/ComputersInTheWorkForce';
 import AboutUs from './pages/AboutUs';
-import SignIn from './pages/SignIn';
+import Account from './pages/Account';
 
 import NavBar from './Components/NavBar';
+
 
 export default class App extends Component {
     static displayName = App.name;
@@ -68,7 +69,7 @@ export default class App extends Component {
                         <Route path="/about-us" Component={AboutUs} />
                         <Route path="/computers-in-the-work-force" Component={ComputersInTheWorkForce} />
 
-                        <Route path="/sign-in" Component={SignIn} />
+                        <Route path="/account" Component={Account} />
                     </Routes>
                 
                 </Router>

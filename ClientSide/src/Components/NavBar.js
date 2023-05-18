@@ -4,7 +4,7 @@ export default function NavBar() {
 
     const UrlPagePairs = { '': 'Home', 'about-us': 'About us', 'computers-in-the-work-force': 'Computers in the work force' }
 
-    const pages = ['', 'about-us', 'computers-in-the-work-force', 'automated-decision-making', 'artificial-intelligence', 'environmental-effects','ethical-issues', 'sign-in' ]
+    const pages = ['', 'about-us', 'computers-in-the-work-force', 'automated-decision-making', 'artificial-intelligence', 'environmental-effects','ethical-issues', 'account' ]
 
     //const currentPage = UrlPagePairs[ window.location.href.split('/')[3]];  
     
@@ -39,7 +39,7 @@ export default function NavBar() {
             <li><a href="/artificial-intelligence" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Artificial Intelligence</a></li>
             <li><a href="/environmental-effects" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Environmental Effects</a></li>
             <li><a href="/ethical-issues" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Ethical issues</a></li>
-            <li><a href="/sign-in" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Sign in</a></li>
+            <li><a href="/account" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Sign in</a></li>
         </ul>
         <div id="nav-underline" />
         <div id="nav-highlight" />
