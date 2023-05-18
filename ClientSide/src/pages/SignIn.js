@@ -8,8 +8,8 @@ const SignIn = () => {
             </h2>
 
             <p class="p1">
-                Sign in
-                FirstName
+                <h3>Sign in</h3>
+                <h4>FirstName</h4>
                 <input />
                 LastName
                 <input />
