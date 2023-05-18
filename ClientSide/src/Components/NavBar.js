@@ -4,7 +4,7 @@ export default function NavBar() {
 
     const UrlPagePairs = { '': 'Home', 'about-us': 'About us', 'computers-in-the-work-force': 'Computers in the work force' }
 
-    const pages = ['', 'about-us', 'computers-in-the-work-force', 'automated-decision-making', 'artificial-intelligence', 'environmental-effects','ethical-issues' ]
+    const pages = ['', 'about-us', 'computers-in-the-work-force', 'automated-decision-making', 'artificial-intelligence', 'environmental-effects','ethical-issues', 'sign-in' ]
 
     //const currentPage = UrlPagePairs[ window.location.href.split('/')[3]];  
     
