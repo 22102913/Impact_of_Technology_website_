@@ -58,7 +58,7 @@ export default class App extends Component {
         return (
 
             <>
-                <NavBar/>
+                
 
 
             <Router>
@@ -69,7 +69,9 @@ export default class App extends Component {
                         
                     </Routes>
                 
-            </Router>
+                </Router>
+
+                <NavBar />
                 </>
 
             //<div>
