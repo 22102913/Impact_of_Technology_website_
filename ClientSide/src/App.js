@@ -69,7 +69,7 @@ export default class App extends Component {
                         <Route path="/about-us" Component={AboutUs} />
                         <Route path="/computers-in-the-work-force" Component={ComputersInTheWorkForce} />
 
-                        <Route path="/account" Component={Account} />
+                        <Route exact path="/account" Component={() => <Account signedIn={false} />} />
                     </Routes>
                 
                 </Router>
