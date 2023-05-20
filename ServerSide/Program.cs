@@ -1,3 +1,7 @@
+using ServerSide.MongoDB;
+
+Cluster0.Connect();
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -23,3 +27,6 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+
+//WUPW9upw7XQ4pxYx

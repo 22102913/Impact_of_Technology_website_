@@ -187,6 +187,7 @@ li {
 
 #title-container {
     margin:25% 10em;
+    width:fit-content;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
     grid-template-rows: 4fr 1fr;
