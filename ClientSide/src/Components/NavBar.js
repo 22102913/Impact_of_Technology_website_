@@ -17,8 +17,8 @@ export default function NavBar() {
         var navbarLinks = document.getElementById('navbar-container').children;
         var currentLink = navbarLinks.item(linkindex).firstChild;
 
-        highlight.style.setProperty('--l', currentLink.offsetLeft + "px");
-        highlight.style.setProperty('--w', currentLink.offsetWidth + "px");
+        highlight.style.setProperty('--l', currentLink.offsetLeft + 10 + "px");
+        highlight.style.setProperty('--w', currentLink.offsetWidth - 20 + "px");
 
         highlight.style.animation = "show 1s cubic-bezier(0.495, 0.010, 0.595, 1.000) forwards";
 
@@ -39,7 +39,8 @@ export default function NavBar() {
             <li><a href="/artificial-intelligence" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Artificial Intelligence</a></li>
             <li><a href="/environmental-effects" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Environmental Effects</a></li>
             <li><a href="/ethical-issues" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Ethical issues</a></li>
-            <li><a href="/account" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Sign in</a></li>
+            <li style={{ float: "right" }}><a href="/account" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Account</a></li>
+            <li style={{ float: "right" }}><a onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>TechEthix</a></li>
         </ul>
         <div id="nav-underline" />
         <div id="nav-highlight" />
@@ -48,13 +49,15 @@ export default function NavBar() {
 
 function SetUnderlinePos(e) {
     var underline = document.querySelector('#nav-underline');
-    underline.style.left = e.offsetLeft + "px";
+    underline.style.left = e.offsetLeft + 5 + "px";
     document.cookie = e.offsetLeft + "px";
-    underline.style.width = e.offsetWidth + "px";
+    underline.style.width = e.offsetWidth - 10 + "px";
 }
 function ReSetunderlinePos() {
     var underline = document.querySelector('#nav-underline');
-    underline.style.left = "0px";
-    underline.style.width = "100%";
+    underline.style.left = "5px";
+    underline.style.width = document.getElementById("nav").offsetWidth - 10 + "px";
+    console.log(":" +  - 10 + "px");
+    //underline.style.width = underline.offsetWidth - 10 + "px";
 }
 
