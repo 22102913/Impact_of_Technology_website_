@@ -1,6 +1,5 @@
 using ServerSide.MongoDB;
 
-Cluster0.Connect();
 
 var builder = WebApplication.CreateBuilder(args);
 
