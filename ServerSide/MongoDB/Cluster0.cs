@@ -45,6 +45,7 @@ namespace ServerSide.MongoDB
 				{"firstName", user.FirstName },
 				{"lastName", user.LastName },
 				{"email", user.Email },
+				{"userName", user.UserName },
 				{"password", user.Password},
 			};
 				

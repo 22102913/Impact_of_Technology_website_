@@ -244,7 +244,7 @@ span {
     position: relative;
     top: 25px;
     margin: 2rem;
-    font-size: 8rem;
+    font-size: 4rem;
     background: linear-gradient(to right, #1BCFAB 0%, #0087B8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -304,10 +304,83 @@ input{
     padding:1em;
     border-style:none;
     outline:none;
-    border-radius:10px;
-    color:#FA7268;
+    border-radius:1rem;
+    color:#1BCFAB;
+    font-size:1rem;
+    font-weight:500;
+    height:fit-content;
+    
 }
 
 #qwerty{
     fill:#faaf6966;
 }
+
+
+
+
+
+/*Toogle switch*/
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+    .toggle-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0087B8;
+    -webkit-transition: .4s;
+    transition: .4s;
+    transition-timing-function:ease;
+}
+
+    .toggle-slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+        transition-timing-function: ease;
+    }
+
+input:checked + .toggle-slider {
+    background-color: #1BCFAB;
+}
+
+input:focus + .toggle-slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .toggle-slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.toggle-slider.round {
+    border-radius: 34px;
+}
+
+    .toggle-slider.round:before {
+        border-radius: 50%;
+    }
+
