@@ -38,8 +38,23 @@ namespace ServerSide.MongoDB
 
 
 
-		public static void AddUser(UserModel user)
+		public static string AddUser(UserModel user)
 		{
+			var email = new BsonDocument
+			{
+				{"email", user.Email},
+			};
+
+			var userName = new BsonDocument
+			{
+				{"userName", user.UserName },
+			};
+
+			if (UsersCollection.Find(email).CountDocuments() != 0)
+				return "invalid-email";
+			if (UsersCollection.Find(userName).CountDocuments() != 0)
+				return "invalid-userName";
+
 			var document = new BsonDocument
 			{
 				{"firstName", user.FirstName },
@@ -50,11 +65,24 @@ namespace ServerSide.MongoDB
 			};
 				
 			UsersCollection.InsertOneAsync(document);
+
+			return "ok";
 		}
 
+		public static bool VerifyUser(UserNamePasswordModel userNamePassword)
+		{
+			var document = new BsonDocument
+			{
+				{"userName", userNamePassword.UserName },
+				{"password", userNamePassword.Password},
+			};
+			if (UsersCollection.Find(document).CountDocuments() == 0)
+				return false;
+			Console.WriteLine("true");
+			return true;
+		}
 
-
-
+		
 
 	
 

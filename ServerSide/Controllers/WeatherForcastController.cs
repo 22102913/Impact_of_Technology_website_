@@ -16,27 +16,29 @@ namespace ServerSide.Controllers
 			_logger = logger;
 		}
 
-
-
-		[HttpGet("getUser")]
-		public UserModel Get()
+		[HttpGet("VerifyUser")]
+		public bool GetUser([FromQuery] UserNamePasswordModel userPassword)
 		{
-			Console.WriteLine("GET");
-			return new UserModel
-			{
-				FirstName = "",
-				LastName = "",
-				Email = "",
-				Password = "",
-			};
-			//.ToArray();
+			Console.WriteLine("Verifying User");
+			Console.WriteLine($"{userPassword.UserName} | {userPassword.Password}");
+			return Cluster0.VerifyUser(userPassword);
 		}
 
-		[HttpPost("PostUser")]
-		public void Post(UserModel user)
+		[HttpGet("AddUser")]
+		public ErrorLogModel AddUser([FromQuery]UserModel user)
 		{
-			Console.WriteLine("POST");
-			Cluster0.AddUser(user);
+			Console.WriteLine("Adding User");
+			var responce = Cluster0.AddUser(user);
+
+			if (responce == "ok")
+			{
+				return new ErrorLogModel { Successful = true, Error = null };
+			}
+			else
+			{
+				return new ErrorLogModel { Successful = false, Error = responce };
+			}
+
 		}
 	}
 }
