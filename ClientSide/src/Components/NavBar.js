@@ -32,15 +32,15 @@ export default function NavBar() {
     return <nav id="nav">
 
         <ul id="navbar-container" onMouseLeave={(e) => {ReSetunderlinePos(e)}}>
-            <li><a href="/" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Home</a></li>
-            <li><a href="/about-us" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>About us</a></li>
-            <li><a href="/computers-in-the-work-force" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Computers in the work force</a></li>
-            <li><a href="/automated-decision-making" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Automated Decision Making</a></li>
-            <li><a href="/artificial-intelligence" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Artificial Intelligence</a></li>
-            <li><a href="/environmental-effects" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Environmental Effects</a></li>
+            <li style={{ float: "right", marginLeft:"2em" }}><a href="/account" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Account</a></li>
             <li><a href="/ethical-issues" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Ethical issues</a></li>
-            <li style={{ float: "right" }}><a href="/account" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Account</a></li>
-            <li style={{ float: "right" }}><a onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>TechEthix</a></li>
+            <li><a href="/environmental-effects" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Environmental Effects</a></li>
+            <li><a href="/artificial-intelligence" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Artificial Intelligence</a></li>
+            <li><a href="/automated-decision-making" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Automated Decision Making</a></li>
+            <li><a href="/computers-in-the-work-force" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Computers in the work force</a></li>
+            <li><a href="/about-us" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>About us</a></li>
+            <li><a href="/" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Home</a></li>
+            <li style={{ float: "left" }}><a onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>TechEthix</a></li>
         </ul>
         <div id="nav-underline" />
         <div id="nav-highlight" />

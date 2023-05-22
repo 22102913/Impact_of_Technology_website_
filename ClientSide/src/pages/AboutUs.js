@@ -7,15 +7,9 @@ const AboutUs = () => {
                 About Us
             </h2>
 
-            <p class="p2">
+            <p class="p1">
                 At TechEthix we provide a platform ...
-
-
-
             </p>
-
-
-
         </>
     );
 };
