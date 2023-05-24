@@ -2,8 +2,19 @@ html {
     height: 100%;
     padding: 0;
     margin: 0;
-    background-image:url("Content//background.svg");
-    background-color: rgb(28,31,47);
+    
+    background-color:#222222FF;
+}
+
+#html-background {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    -webkit-mask-image: url("Content//background.svg");
+    mask-image: url("Content//background.svg");
+    background-image: linear-gradient(to right, #1BCFAB 0%, #0087B8 100%)
 }
 
 body {
@@ -218,21 +229,10 @@ li {
 
 
 
-#title-background {
-    position: absolute;
-    top: 25%;
-    height:50%;
-    width:100%;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    background: linear-gradient(26.62deg, #C6236866 20.64%, #f1943e99 25%),
-        linear-gradient(56.79deg, #B95BE6 33.79%, rgba(185, 91, 230, 0) 72.67%),
-        linear-gradient(301.08deg, #ebd99999 10%, #faaf6999 10%),
-        linear-gradient(141.57deg, #faaf6999 19.08%, #faaf6966 98.72%, #D3E4FF);
+.background-blur {
+    background: radial-gradient(circle at center,#1BCFAB66 25%,#0087B866 50%, #0087B800 75%,#0087B800 100%);
     background-blend-mode: normal,hard-light,normal,darken,normal,normal;
-    filter: blur(100px);
-    -webkit-filter: blur(100px);
-    opacity:0.6;
+    backdrop-filter: blur(10px);
 }
 
 
@@ -269,7 +269,6 @@ span {
 p {
     font-size: 1.5rem;
     margin: 0;
-    background-color: #ffffff22;
     padding:0 4rem;
     top:0;
     display: flex;
@@ -279,12 +278,21 @@ p {
 }
 
 .p0 {
-    background-color: #0000;
-    color: #0087B8;
-
-    margin:1rem;
+    display:inline;
+    background-color:#222222ee;
+    height:auto;
+    backdrop-filter:blur(1px);
+    color:#0087B8;
     border-radius:10px;
+    border-width:2px;
+    border-color:#EEEEEE44;
+    border-style:solid;
+    padding:.75em;
+    margin:2em;
+    
 }
+
+
 
 .p1 {
     color: #0087B8;
@@ -300,6 +308,21 @@ p {
     margin: 1rem;
     border-radius: 10px;
 }
+
+.p3 {
+    background-color: #FFFFFF11;
+    height: auto;
+    backdrop-filter: blur(1px);
+    color: #0087B8;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: #EEEEEE44;
+    border-style: solid;
+    padding: .75em;
+    margin: 2em;
+    margin: 10% 20%;
+}
+
 
 input{
     background-color:#222222ee;
