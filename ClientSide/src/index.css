@@ -7,14 +7,48 @@ html {
 }
 
 #html-background {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
     -webkit-mask-image: url("Content//background.svg");
     mask-image: url("Content//background.svg");
-    background-image: linear-gradient(to right, #1BCFAB 0%, #0087B8 100%)
+    background-color:#333333;
+    /*background-image: linear-gradient(-45deg, #1BCFAB,#333333, #0087B8);*/
+    
+    background-size: 400% 400%;
+    z-index: -1000000000000000000;
+    /**/
+}
+    #html-background.scroll {
+        animation: html-bg-onScroll 99s ease forwards;
+    }
+
+@keyframes html-bg-onScroll{
+    0% {
+        background-color: var(#333);
+    }
+    50%{
+        background-color:var(--bgColour);
+    }
+    100% {
+        background-color: var(#333);
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 body {
@@ -57,6 +91,7 @@ h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     min-width:fit-content;
+
 }
 
 

@@ -48,23 +48,23 @@ const AboutUs = () => {
                 display: "grid", gridTemplateColumns:" 1fr 1fr", margin: "4em 20%"
             }}>
                 <p className="p0">
-                    <a href="#" className="p0-title"><button>Computers in the Workforce:</button></a> Explore the impact of computers and automation on the modern workforce, including the potential for job displacement, changing skill requirements, and the ethical considerations surrounding human-machine collaboration.
+                    <a href="../computers-in-the-work-force" className="p0-title"><button>Computers in the Workforce:</button></a> Explore the impact of computers and automation on the modern workforce, including the potential for job displacement, changing skill requirements, and the ethical considerations surrounding human-machine collaboration.
                     </p>
             <p className="p0">
-                <a href="../" className="p0-title"><button>Automated Decision Making:</button></a> Examine the ethical implications of automated decision-making systems, such as algorithms and machine learning models, and their potential biases, transparency issues, and societal consequences.
+                    <a href="../automated-decision-making" className="p0-title"><button>Automated Decision Making:</button></a> Examine the ethical implications of automated decision-making systems, such as algorithms and machine learning models, and their potential biases, transparency issues, and societal consequences.
             </p>
             <p className="p0" >
-                <a href="#" className="p0-title"><button>Artificial Intelligence:</button></a> Delve into the ethical challenges arising from the development and deployment of artificial intelligence technologies, including topics like AI ethics, accountability, privacy concerns, and the ethical use of AI in various domains.
+                    <a href="../artificial-intelligence" className="p0-title"><button>Artificial Intelligence:</button></a> Delve into the ethical challenges arising from the development and deployment of artificial intelligence technologies, including topics like AI ethics, accountability, privacy concerns, and the ethical use of AI in various domains.
             </p>
             <p className="p0" >
-                <a href="#" className="p0-title"><button>Environmental Effects:</button></a> Investigate the environmental impact of technology, including issues such as e-waste, energy consumption, carbon footprint, and the pursuit of sustainable and eco-friendly technological practices.
+                    <a href="../environmental-effects" className="p0-title"><button>Environmental Effects:</button></a> Investigate the environmental impact of technology, including issues such as e-waste, energy consumption, carbon footprint, and the pursuit of sustainable and eco-friendly technological practices.
             </p>
             </div>
             <div style={{
                 display: "grid", margin: "4em 20%"
             }}>
             <p className="p0" >
-                <a href="#" className="p0-title"><button>Ethical Issues:</button></a> Discuss a wide range of ethical issues associated with technology, including privacy, data security, digital rights, social impact, equity, fairness, and the ethical responsibilities of technology creators and users.
+                    <a href="../ethical-issues" className="p0-title"><button>Ethical Issues:</button></a> Discuss a wide range of ethical issues associated with technology, including privacy, data security, digital rights, social impact, equity, fairness, and the ethical responsibilities of technology creators and users.
                 </p>
                 </div>
 

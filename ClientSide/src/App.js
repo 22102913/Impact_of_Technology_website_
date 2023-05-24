@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation }
     from 'react-router-dom';
 
@@ -12,12 +12,43 @@ import NavBar from './Components/NavBar';
 
 export default class App extends Component {
     static displayName = App.name;
+    static PrevScrollY = 0;
+    static MINUTE_MS = 600;
 
     constructor(props) {
         super(props);
 
-        this.state = { forecasts: [], loading: true};
+        this.state = { forecasts: [], loading: true };
+        
+
+        window.onscroll = function (e) {
+            var bg = document.getElementById("html-background");
+
+            var scrollSpeed = (Math.abs(window.scrollY - App.PrevScrollY) / window.innerHeight) * 100;
+            if (scrollSpeed > 1) { scrollSpeed = 1; }
+
+            var r = scrollSpeed * (27 * 1);
+            var g = scrollSpeed * (207 * 1);
+            var b = scrollSpeed * (171 * 1);
+            console.log(r,g,b);
+
+            var backgroundColor = `rgba(${r},${g},${b},255)`;
+
+            bg.style.setProperty("--bgColour", backgroundColor);
+
+            bg.style.animation = 'html-bg-onScroll 50s forwards';
+
+
+            App.PrevScrollY = window.scrollY;
+            
+        }
+
+
     }
+    
+
+    
+
 
     componentDidMount() {
     }
