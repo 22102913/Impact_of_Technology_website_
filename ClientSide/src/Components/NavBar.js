@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { accountLogo } from "../Content/user-icon.svg";
 
+import ToggleSwitch from "./ToggleSwitch";
+
 export default function NavBar() {
 
     const UrlPagePairs = { '': 'Home', 'about-us': 'About us', 'computers-in-the-work-force': 'Computers in the work force' }
@@ -47,8 +49,8 @@ export default function NavBar() {
             <li><a href="/artificial-intelligence" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Artificial Intelligence</a></li>
             <li><a href="/environmental-effects" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Environmental Effects</a></li>
             <li><a href="/ethical-issues" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Ethical issues</a></li>
-            <li style={{ float: "right", height: "75%" }}><a href="/account" onMouseEnter={(e) => { SetUnderlinePos(e.target) }} style={{ padding: ".2em", height: "100%", aspectRatio: "1/1" }}><img class="account-icon"></img></a></li>
-            <li style={{ float: "right", marginTop: "0.1%", height: "75%", aspectRatio: "1/1" }}><button style={{ width: "100%", height: "100%" }} onClick={ChangeBg }></button></li>
+            <li style={{ float: "right",marginLeft:"auto" }}><ToggleSwitch offCommand={ChangeBg} onCommand={ChangeBg}></ToggleSwitch></li>
+            <li style={{ height: "auto",  aspectRatio:"1/1", transform:"translateX(-200%)"  }}><a href="/account" onMouseEnter={(e) => { SetUnderlinePos(e.target) }} style={{ padding: ".0", height: "100%", aspectRatio: "1/1" }}><img class="account-icon"></img></a></li>
         </ul>
         <div id="nav-underline" />
         <div id="nav-highlight" />
