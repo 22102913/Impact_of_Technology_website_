@@ -23,7 +23,7 @@ const AboutUs = () => {
                 About Us
             </h2>
 
-            <div class="p1" style={{ width: "100%" }}>
+            <div  style={{ width: "100%" }}>
                 
             <p class="p3">
                 Welcome to our website! Here, we delve into the fascinating and complex world of technology, with a particular focus on exploring the ethical issues that arise from its rapid advancement. Our mission is to foster awareness and promote thought-provoking discussions surrounding the intersection of technology and ethics.

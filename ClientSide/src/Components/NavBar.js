@@ -7,8 +7,15 @@ export default function NavBar() {
 
     const pages = ['', 'about-us', 'computers-in-the-work-force', 'automated-decision-making', 'artificial-intelligence', 'environmental-effects','ethical-issues', 'account' ]
 
-    //const currentPage = UrlPagePairs[ window.location.href.split('/')[3]];  
-    
+    //const currentPage = UrlPagePairs[ window.location.href.split('/')[3]];
+
+    function ChangeBg() {
+        var htmlBg = document.getElementById("html-background");
+       
+        htmlBg.classList.toggle("with-mask");
+
+    }
+
     
 
     useEffect(() => {
@@ -40,7 +47,8 @@ export default function NavBar() {
             <li><a href="/artificial-intelligence" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Artificial Intelligence</a></li>
             <li><a href="/environmental-effects" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Environmental Effects</a></li>
             <li><a href="/ethical-issues" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Ethical issues</a></li>
-            <li style={{ float: "right", marginLeft: "2em", height:"75%" }}><a href="/account" onMouseEnter={(e) => { SetUnderlinePos(e.target) }} style={{ padding:".2em", height:"100%", aspectRatio:"1/1" }}><img></img></a></li>
+            <li style={{ float: "right", height: "75%" }}><a href="/account" onMouseEnter={(e) => { SetUnderlinePos(e.target) }} style={{ padding: ".2em", height: "100%", aspectRatio: "1/1" }}><img></img></a></li>
+            <li style={{ float: "right", marginTop: "0.1%", height: "75%", aspectRatio: "1/1" }}><button style={{ width: "100%", height: "100%" }} onClick={ChangeBg }></button></li>
         </ul>
         <div id="nav-underline" />
         <div id="nav-highlight" />

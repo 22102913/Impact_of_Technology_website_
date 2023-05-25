@@ -25,9 +25,9 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="px"
      showgrid="false"
-     inkscape:zoom="33.743993"
-     inkscape:cx="7.4235436"
-     inkscape:cy="10.105502"
+     inkscape:zoom="47.721213"
+     inkscape:cx="10.655639"
+     inkscape:cy="6.9570739"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
@@ -67,7 +67,8 @@
        y1="2.1166668"
        x2="4.233333"
        y2="2.1166668"
-       gradientUnits="userSpaceOnUse" />
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.96934099,0,0,0.96934108,0.06489502,0.06489487)" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient3719"
@@ -76,7 +77,8 @@
        y1="0.42340863"
        x2="-0.1411362"
        y2="3.4892013"
-       gradientUnits="userSpaceOnUse" />
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0,0.1322917)" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient3719"
@@ -95,7 +97,7 @@
        style="fill:url(#linearGradient5907);fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
        id="path1677"
        cx="2.1166666"
-       cy="1.0583333"
+       cy="1.190625"
        r="0.79374999" />
     <circle
        style="fill:url(#linearGradient5909);fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
@@ -105,11 +107,11 @@
        r="1.8520833"
        clip-path="url(#clipPath3525)" />
     <ellipse
-       style="fill:none;stroke:url(#linearGradient3721);stroke-width:0.130688;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:url(#linearGradient3721);stroke-width:0.256471;stroke-dasharray:none;stroke-opacity:1"
        id="path1465"
-       cx="2.1166666"
-       cy="2.1166668"
-       rx="2.0513225"
-       ry="2.0513227" />
+       cx="2.1166668"
+       cy="2.116667"
+       rx="1.9884311"
+       ry="1.9884312" />
   </g>
 </svg>

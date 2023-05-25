@@ -5,6 +5,9 @@ import { BrowserRouter as Router, Routes, Route, useLocation }
 import Home from './pages/Home';
 import ComputersInTheWorkForce from './pages/ComputersInTheWorkForce';
 import AboutUs from './pages/AboutUs';
+import AutomatedDecisionMaking from './pages/AutomatedDecisionMaking';
+
+
 import Account from './pages/Account';
 
 import NavBar from './Components/NavBar';
@@ -21,7 +24,7 @@ export default class App extends Component {
         this.state = { forecasts: [], loading: true };
         
 
-        window.onscroll = function (e) {
+        /*window.onscroll = function (e) {
             var bg = document.getElementById("html-background");
 
             var scrollSpeed = (Math.abs(window.scrollY - App.PrevScrollY) / window.innerHeight) * 100;
@@ -41,7 +44,7 @@ export default class App extends Component {
 
             App.PrevScrollY = window.scrollY;
             
-        }
+        }*/
 
 
     }
@@ -73,6 +76,7 @@ export default class App extends Component {
                         <Route path="/" Component={Home} />
                         <Route path="/about-us" Component={AboutUs} />
                         <Route path="/computers-in-the-work-force" Component={ComputersInTheWorkForce} />
+                        <Route path="/automated-decision-making" Component={AutomatedDecisionMaking} />
 
                         <Route exact path="/account" Component={() => <Account signedIn={false} />} />
                     </Routes>
