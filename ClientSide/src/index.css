@@ -474,8 +474,19 @@ input:checked + .toggle-slider:before {
 
 
 
-img{
+img.account-icon{
     content:url("Content//account-icon.svg");
     width:100%;
     height:100%;
 }
+
+.img-container {
+    margin: 2em;
+    width: 30%;
+}
+
+    .img-container > img {
+        border-radius: 10px;
+        border: 4px solid #FFFFFF44;
+        
+    }
