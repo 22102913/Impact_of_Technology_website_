@@ -18,43 +18,57 @@ export default function NavBar() {
 
     }
 
-    
-
     useEffect(() => {
         // code to run after render goes here
         const linkindex = pages.indexOf(window.location.href.split('/')[3]);
-        var highlight = document.querySelector('#nav-highlight');
+        var highlight = document.getElementById('nav-highlight');
         var navbarLinks = document.getElementById('navbar-container').children;
         var currentLink = navbarLinks.item(linkindex).firstChild;
 
+        
+
+        
+
+        highlight.style.top = document.getElementById("navbar-container").offsetHeight - 10 + "px";
+        document.getElementById("nav-underline").style.top = document.getElementById("navbar-container").offsetHeight - 5 + "px";
+
         highlight.style.setProperty('--l', currentLink.offsetLeft + 10 + "px");
         highlight.style.setProperty('--w', currentLink.offsetWidth - 20 + "px");
-
         highlight.style.animation = "show 1s cubic-bezier(0.495, 0.010, 0.595, 1.000) forwards";
 
-        //highlight.style.left = currentLink.offsetLeft + "px";
-        //highlight.style.width = currentLink.offsetWidth + "px";
+        highlight.style.left = currentLink.offsetLeft + "px";
+        highlight.style.width = currentLink.offsetWidth + "px";
         console.log(currentLink.offsetLeft);
         console.log(currentLink.offsetWidth);
 
+
+
+
+
+
+
+
     }, []);
 
-    return <nav id="nav">
+    return <>
+        <nav id="nav">
 
-        <ul id="navbar-container" onMouseLeave={(e) => {ReSetunderlinePos(e)}}>
-            <li><a href="/" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>TechEthix</a></li>
-            <li><a href="/about-us" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>About us</a></li>
-            <li><a href="/computers-in-the-work-force" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Computers in the work force</a></li>
-            <li><a href="/automated-decision-making" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Automated Decision Making</a></li>
-            <li><a href="/artificial-intelligence" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Artificial Intelligence</a></li>
-            <li><a href="/environmental-effects" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Environmental Effects</a></li>
-            <li><a href="/ethical-issues" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Ethical issues</a></li>
-            <li style={{ float: "right",marginLeft:"auto" }}><ToggleSwitch offCommand={ChangeBg} onCommand={ChangeBg}></ToggleSwitch></li>
-            <li style={{ height: "auto",  aspectRatio:"1/1", transform:"translateX(-200%)"  }}><a href="/account" onMouseEnter={(e) => { SetUnderlinePos(e.target) }} style={{ padding: ".0", height: "100%", aspectRatio: "1/1" }}><img class="account-icon"></img></a></li>
-        </ul>
+            <ul id="navbar-container" onMouseLeave={(e) => {ReSetunderlinePos(e)}}>
+                <li><a href="/" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>TechEthix</a></li>
+                <li><a href="/about-us" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>About us</a></li>
+                <li><a href="/computers-in-the-work-force" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Computers in the work force</a></li>
+                <li><a href="/automated-decision-making" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Automated Decision Making</a></li>
+                <li><a href="/artificial-intelligence" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Artificial Intelligence</a></li>
+                <li><a href="/environmental-effects" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Environmental Effects</a></li>
+                <li><a href="/ethical-issues" onMouseEnter={(e) => { SetUnderlinePos(e.target) }}>Ethical issues</a></li>
+                <li style={{ float: "right",marginLeft:"auto" }}><ToggleSwitch offCommand={ChangeBg} onCommand={ChangeBg}></ToggleSwitch></li>
+                <li style={{ height: "auto",  aspectRatio:"1/1", transform:"translateX(-200%)"  }}><a href="/account" onMouseEnter={(e) => { SetUnderlinePos(e.target) }} style={{ padding: ".0", height: "100%", aspectRatio: "1/1" }}><img class="account-icon"></img></a></li>
+            </ul>
+        
+        </nav>
         <div id="nav-underline" />
         <div id="nav-highlight" />
-    </nav>
+    </>
 }
 
 function SetUnderlinePos(e) {

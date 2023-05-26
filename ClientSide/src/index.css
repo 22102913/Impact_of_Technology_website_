@@ -215,23 +215,23 @@ li {
 
 
 #nav-underline {
-    position: absolute;
+    z-index:999999999999999999999999999999999999999999999999999999999999999999999999;
+    position: fixed;
     background-color: #0087B8;
     height: 4px;
     left: 0;
     width: 100%;
-    bottom: 4px;
     transition: 0.5s;
     border-radius: 3px;
 }
 
 #nav-highlight {
-    position: absolute;
+    top:200px;
+    position: fixed;
     background-color: #1BCFAB;
     height: 4px;
     left: 0;
     width: 0;
-    bottom: 10px;
     border-radius: 3px;
 }
 
