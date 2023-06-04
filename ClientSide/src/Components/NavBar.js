@@ -18,8 +18,6 @@ export default function NavBar() {
 
     }
 
-    
-
     useEffect(() => {
         // code to run after render goes here
 
@@ -57,9 +55,17 @@ export default function NavBar() {
             console.log(navbar.offsetHeight + "px");
         }
 
+
+
+
+
+
+
+
     }, []);
 
-    return <nav id="nav">
+    return <>
+        <nav id="nav">
 
         <ul id="navbar-container" onMouseLeave={(e) => {ReSetunderlinePos(e)}}>
             <li style={{ width: "100px" }}><a href="/" onMouseEnter={(e) => { SetUnderlinePos(e.target) }} style={{ margin: "0", width: "fit-content" }} >
@@ -79,7 +85,7 @@ export default function NavBar() {
         </ul>
         <div id="nav-underline" />
         <div id="nav-highlight" />
-    </nav>
+    </>
 }
 
 function SetUnderlinePos(e) {

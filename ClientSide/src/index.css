@@ -220,7 +220,6 @@ li {
     height: 4px;
     left: 0;
     width: 100%;
-    bottom: 4px;
     transition: 0.5s;
     border-radius: 3px;
 }
@@ -231,7 +230,6 @@ li {
     height: 4px;
     left: 0;
     width: 0;
-    bottom: 10px;
     border-radius: 3px;
 }
     #nav-highlight.show {
