@@ -215,7 +215,7 @@ li {
 
 
 #nav-underline {
-    position: absolute;
+    position: fixed;
     background-color: #0087B8;
     height: 4px;
     left: 0;
@@ -226,7 +226,7 @@ li {
 }
 
 #nav-highlight {
-    position: absolute;
+    position: fixed;
     background-color: #1BCFAB;
     height: 4px;
     left: 0;
@@ -234,8 +234,14 @@ li {
     bottom: 10px;
     border-radius: 3px;
 }
+    #nav-highlight.show {
+        animation-name: show-hightlight;
+        animation-duration: 1s;
+        animation-timing-function: ease;
+        animation-fill-mode:forwards;
+    }
 
-@keyframes show {
+@keyframes show-hightlight {
     from {
         left:calc(var(--l) + (var(--w)/2));
         width:0px;
@@ -248,6 +254,7 @@ li {
 }
 
 #title-container {
+    position:relative;
     width: 100%;
     height: 100vh;
     display: grid;
@@ -388,6 +395,7 @@ p {
         1fr /* max value */
       )
     );
+    align-items:center;
 }
 
 @keyframes show{
@@ -495,19 +503,21 @@ img.account-icon{
 }
 
 .img-container {
-    width: fit-content;
+    width: 80%;
+    height: fit-content;
     border-radius: 10px;
     border: 2px solid #FFFFFF44;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    margin: 5% 10%;
+    margin: 0 10%;
+    animation-name: show;
+    animation-duration: 2s;
+    animation-timing-function: ease;
 }
 
 
     .img-container > img {
-        width:100%;
-        height:100%;
-       
-        
+        width: fit-content;
+        height: fit-content;
     }
         .img-container:hover > img {
             animation-name: img-zoom;
@@ -519,7 +529,70 @@ img.account-icon{
 
 @keyframes img-zoom{
     to{
-        border-color:#0087B8;
         transform:scale(1.2);
     }
+}
+
+svg{
+    min-width:20px;
+    min-height:20px;
+}
+
+.path {
+    stroke-dasharray: var(--length);
+    stroke-dashoffset: var(--length);
+    animation-name: path-loop;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+}
+
+@keyframes path-loop{
+    0% {
+        stroke-dashoffset: var(--length);
+    }
+    49% {
+        stroke-dashoffset: var(--end,0);
+    }
+    51% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: var(--length);
+    }
+}
+
+.show-on-hover{
+    opacity:0;
+}
+
+.show-on-hover:hover {
+    animation-name: show;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode:forwards;
+}
+
+
+
+#footer-preview {
+    position: sticky;
+    bottom: 0;
+    padding: .5rem;
+    background-color: #333333ee;
+    color: #c1c1c1;
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    align-items:center;
+}
+
+footer{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width:auto;
+    position:relative;
+    left:0;
+    padding:1rem;
+    background-color:#222222ee;
+    color:#c1c1c1;
+
 }

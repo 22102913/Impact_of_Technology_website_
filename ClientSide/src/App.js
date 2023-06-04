@@ -6,12 +6,14 @@ import Home from './pages/Home';
 import ComputersInTheWorkForce from './pages/ComputersInTheWorkForce';
 import AboutUs from './pages/AboutUs';
 import AutomatedDecisionMaking from './pages/AutomatedDecisionMaking';
-
+import ArtificialIntelligence from './pages/ArtificialIntelligence';
+import EnvironmentalEffects from './pages/EnvironmentalEffects';
+import EthicalIssues from './pages/EthicalIssues';
 
 import Account from './pages/Account';
 
 import NavBar from './Components/NavBar';
-
+import Footer from './Components/Footer';
 
 export default class App extends Component {
     static displayName = App.name;
@@ -54,9 +56,14 @@ export default class App extends Component {
 
 
     componentDidMount() {
-    }
+        const pageTitle = document.getElementsByClassName('page-title');
+        if (pageTitle.length > 0) {
+            pageTitle[0].style.top = document.getElementById('nav').offsetTop + "px";
+            console.log(document.getElementById('nav').offsetTop + "px");
+        }
 
-    static renderForecastsTable(forecasts) {
+        
+
 
     }
 
@@ -68,29 +75,26 @@ export default class App extends Component {
         return (
 
             <>
-                
-
-
             <Router>
                     <Routes>
                         <Route path="/" Component={Home} />
                         <Route path="/about-us" Component={AboutUs} />
                         <Route path="/computers-in-the-work-force" Component={ComputersInTheWorkForce} />
                         <Route path="/automated-decision-making" Component={AutomatedDecisionMaking} />
+                        <Route path="/artificial-intelligence" Component={ArtificialIntelligence} />
+                        <Route path="/environmental-effects" Component={EnvironmentalEffects }/>
+                        <Route path="/ethical-issues" Component={EthicalIssues }/>
 
                         <Route exact path="/account" Component={() => <Account signedIn={false} />} />
+
                     </Routes>
                 
                 </Router>
 
                 <NavBar />
+                
+                <Footer />
                 </>
-
-            //<div>
-            //    <h1 id="tabelLabel" >Weather forecast</h1>
-            //    <p>This component demonstrates fetching data from the server.</p>
-            //    {contents}
-            //</div></>
         );
     }
 

@@ -12,8 +12,7 @@ const Account = ({signedIn }) => {
     const erros = ["", "Invalid userName or Password", "Email has been taken", "UserName has been taken"];
 
 
-    async function VerifyUser() {
-        //WeatherForecast/VerifyUser?Password=123456&UserName=Shray
+    async function VerifyUser() {/*
 
         const userName = await document.getElementById("userName-input").value;
         const password = await document.getElementById("password-input").value;
@@ -25,9 +24,12 @@ const Account = ({signedIn }) => {
         if (!data) {
             SetErrorNum(1);
         }
+        else {
+            SetErrorNum(0);
+        }*/
     }
 
-    async function PostUserToServer(firstName, lastName, email, userName, password) {
+    async function PostUserToServer(firstName, lastName, email, userName, password) {/*
         const response = await fetch(`weatherforecast/AddUser?FirstName=${firstName}&LastName=${lastName}&Password=${password}&UserName=${userName}&Email=${email}`);
         const data = await response.json();
 
@@ -42,7 +44,9 @@ const Account = ({signedIn }) => {
         }
         else if (data["error"] == "invalid-userName") {
             SetErrorNum(3);
-        }
+        }*/
+        setLog(true);
+        SetErrorNum(0);
     }
 
     function ConfirmSignIn() {
@@ -58,7 +62,7 @@ const Account = ({signedIn }) => {
 
 
 
-    const sigUpForm = <div style={{ display: "grid", gridTemplateColumns: "40% 50%", width: "100%", height: "100%", alignItems: "center" }}>
+    const sigUpForm = <div style={{ display: "grid", gridTemplateColumns: "40% 50%", width: "100%", height: "fit-content", alignItems: "center" }}>
         <h3>Sign Up</h3>
         <div></div>
         <h4>FirstName</h4>
@@ -74,7 +78,7 @@ const Account = ({signedIn }) => {
         <button onClick={ConfirmSignIn}>Confirm</button>
     </div>
 
-    const logInForm = <div style={{ display: "grid", gridTemplateColumns: "40% 50%", width: "100%", height: "100%", alignItems: "center" }}>
+    const logInForm = <div style={{ display: "grid", gridTemplateColumns: "40% 50%", width: "100%", height: "fit-content", alignItems: "center" }}>
         <h3>Log in</h3>
         <div></div>
         <h4>UserName</h4>
@@ -86,15 +90,16 @@ const Account = ({signedIn }) => {
 
 
     return (
-        <div>
-            <div class="content-container" style={{ display: "grid",gridTemplateColumns : "60% 40%" } }>
-                <div style={{ display: "grid", gridTemplateRows: " 15% 75%", height:"inherit" }} >
-                    <h2 class="page-title" >
+        <>
+            <h2 class="page-title" >
                         Account
                     </h2>
-                    <div>
+            <div class="content-container" style={{ display: "grid",gridTemplateColumns : "60% 40%", height:"fit-content", minHeight:"90vh", position:"relative", marginTop:"8rem"} }>
+                <div style={{ display: "grid", gridTemplateRows: " 15% 75%" }} >
+                    
+                    <div style={{height:"fit-content"} }>
                         {!loggedIn ? <ToggleSwitch offCommand={() => { SetLogIn(false) }} onCommand={() => { SetLogIn(true) }} /> : <></>  }
-                        <p class="p2" style={{height:"100%", minHeight:"fit-content"}}>
+                        <p class="p2" style={{height:"fit-content", position:"relative", padding:"1rem"}}>
                             {loggedIn ? <h2>You are logged in</h2> : 
                                 <div style={{width:"100%"} }>
                                     <h5 style={{ margin: "1em" }}>You are not currently logged in.</h5>
@@ -105,13 +110,13 @@ const Account = ({signedIn }) => {
                         </p>
                     </div>
                 </div>
-                <p class = "p1">
+                <p class="p1" style={{height:"auto"} }>
                     Sign in to join the diccusion about the ethical impact of technology.
                 </p>
             </div>
 
             
-        </div>
+        </>
     );
 };
 
