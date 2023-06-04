@@ -17,7 +17,6 @@ In the index.html file, when opened it will re-direct the user to the online net
     <title>HTML 5 Boilerplate</title>
   </head>
   <body>
-	<script src="index.js"></script>
   </body>
 </html>
 ```
