@@ -5,7 +5,7 @@
 As I used react instead of normal javascript I uploaded the website to "https://wqe220993webproject.netlify.app/".
 In the index.html file, when opened it will re-direct the user to the online netlify site as i couldn't package the react files to normal html/css/js files.
 
-**Index.html file: ** "https://github.com/22102913/Impact_of_Technology_website_/blob/master/index.html".
+**Index.html file** : "https://github.com/22102913/Impact_of_Technology_website_/blob/master/index.html".
 ```
 <!DOCTYPE html>
 <html lang="en">
